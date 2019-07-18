@@ -59,7 +59,7 @@ class HasOneButtonField extends GridField
         $config = GridFieldConfig::create()
             ->addComponent(new GridFieldHasOneButtonRow())
             ->addComponent(new GridFieldSummaryField($relationName))
-            ->addComponent(new GridFieldDetailForm())
+            ->addComponent(new GridFieldDetailForm(null, false, false))
             ->addComponent(new GridFieldHasOneUnlinkButton($parent, 'buttons-before-right'))
             ->addComponent(new GridFieldHasOneEditButton('buttons-before-right'));
         
